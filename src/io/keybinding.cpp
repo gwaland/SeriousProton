@@ -528,15 +528,14 @@ void Keybinding::handleEvent(const SDL_Event& event)
         break;
     case SDL_MOUSEBUTTONDOWN:
         {
-            LOG(INFO) << "keybindings timestamp: " + std::to_string(event.button.timesta
-            LOG(INFO) << "keybindings  windowID: " + std::to_string(event.button.windowI
+            LOG(INFO) << "keybindings timestamp: " + std::to_string(event.button.timestamp);
+            LOG(INFO) << "keybindings  windowID: " + std::to_string(event.button.windowID);
             LOG(INFO) << "keybindings     which: " + std::to_string(event.button.which);
-            LOG(INFO) << "keybindings    button: " + std::to_string(event.button.button)
+            LOG(INFO) << "keybindings    button: " + std::to_string(event.button.button);
             LOG(INFO) << "keybindings     state: " + std::to_string(event.button.state);
-            LOG(INFO) << "keybindings    clicks: " + std::to_string(event.button.clicks)
+            LOG(INFO) << "keybindings    clicks: " + std::to_string(event.button.clicks);
             LOG(INFO) << "keybindings         x: " + std::to_string(event.button.x);
             LOG(INFO) << "keybindings         y: " + std::to_string(event.button.y);
-
             io::Pointer::Button button = io::Pointer::Button::Unknown;
             switch(event.button.button)
             {
