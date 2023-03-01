@@ -515,6 +515,7 @@ void Keybinding::allPostUpdate()
 
 void Keybinding::handleEvent(const SDL_Event& event)
 {
+    LOG(INFO) << "keybindings      type: " + std::to_string(event.type);
     switch(event.type)
     {
     case SDL_KEYDOWN:
@@ -527,7 +528,6 @@ void Keybinding::handleEvent(const SDL_Event& event)
         break;
     case SDL_MOUSEBUTTONDOWN:
         {
-            LOG(INFO) << "keybindings      type: " + std::to_string(event.type);
             LOG(INFO) << "keybindings timestamp: " + std::to_string(event.button.timesta
             LOG(INFO) << "keybindings  windowID: " + std::to_string(event.button.windowI
             LOG(INFO) << "keybindings     which: " + std::to_string(event.button.which);
